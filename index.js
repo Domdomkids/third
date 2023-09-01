@@ -12,7 +12,8 @@ const awardrouter = require("./routes/awardRoute.js");
 const messagerouter = require("./routes/messageRoute.js");
 const orderrouter = require("./routes/orderRoute.js");
 const contentwriterouter = require("./routes/contentwritingRoute.js");
-
+const sharerouter = require("./routes/shareRoute.js");
+const shareplanrouter = require("./routes/shareplanRoute.js");
 
 app.use(cors());
 app.use(express.json());
@@ -26,6 +27,8 @@ app.use('/billing', billingrouter);
 app.use('/message', messagerouter);
 app.use('/orders', orderrouter);
 app.use('/content', contentwriterouter);
+app.use('/share', sharerouter);
+app.use('/adminshare', shareplanrouter);
 app.use('/uploads', express.static('./uploads'));
 
 
